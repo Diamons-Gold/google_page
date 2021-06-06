@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Google</title>
+        <link rel="icon" href="img/icon.ico">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <section>
+            <div class="main">
+                <img src="img/google.png">
+                <div class="searchBx">
+                    <input id="searchInput" type="text" name="" class="query">
+                    <div class="icons">
+                        <div><img src="img/search.png"></div>
+                        <div><img src="img/cross.png"></div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="searchBtn" onclick="search()">Google Search</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            let query = document.querySelector('.query');
+            let searchBtn = document.querySelector('.searchBtn');
+            var input = document.getElementById("searchInput");
+
+            input.addEventListener("keyup", function(event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    search()
+                }
+            });
+
+            function search() {
+                let url = 'https://www.google.com/search?q='+query.value;
+                console.log(query.value)
+                if (!query.value.length == 0) {
+                    window.open(url,'_self')
+                }
+            }
+        </script>
+    </body>
+</html>
