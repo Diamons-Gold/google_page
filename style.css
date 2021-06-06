@@ -5,6 +5,11 @@
     font-family: 'arial', sans-serif;
 }
 
+html {
+    background: rgb(255,136,0);
+    background: linear-gradient(160deg, rgba(255,136,0,1) 0%, rgba(178,0,242,1) 28%, rgba(126,121,255,1) 100%);
+}
+
 section {
     position: relative;
     width: 100%;
